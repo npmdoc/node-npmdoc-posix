@@ -1,0 +1,2551 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="http://github.com/ohmu/node-posix"
+
+    >posix (v4.1.1)</a>
+</h1>
+<h4>The missing POSIX system calls</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.posix">module posix</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.chroot">
+            function <span class="apidocSignatureSpan">posix.</span>chroot
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.closelog">
+            function <span class="apidocSignatureSpan">posix.</span>closelog
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.getegid">
+            function <span class="apidocSignatureSpan">posix.</span>getegid
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.geteuid">
+            function <span class="apidocSignatureSpan">posix.</span>geteuid
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.getgid">
+            function <span class="apidocSignatureSpan">posix.</span>getgid
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.getgrnam">
+            function <span class="apidocSignatureSpan">posix.</span>getgrnam
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.gethostname">
+            function <span class="apidocSignatureSpan">posix.</span>gethostname
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.getpgid">
+            function <span class="apidocSignatureSpan">posix.</span>getpgid
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.getpgrp">
+            function <span class="apidocSignatureSpan">posix.</span>getpgrp
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.getppid">
+            function <span class="apidocSignatureSpan">posix.</span>getppid
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.getpwnam">
+            function <span class="apidocSignatureSpan">posix.</span>getpwnam
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.getrlimit">
+            function <span class="apidocSignatureSpan">posix.</span>getrlimit
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.getuid">
+            function <span class="apidocSignatureSpan">posix.</span>getuid
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.initgroups">
+            function <span class="apidocSignatureSpan">posix.</span>initgroups
+            <span class="apidocSignatureSpan">(user, group)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.openlog">
+            function <span class="apidocSignatureSpan">posix.</span>openlog
+            <span class="apidocSignatureSpan">(ident, option, facility)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.setegid">
+            function <span class="apidocSignatureSpan">posix.</span>setegid
+            <span class="apidocSignatureSpan">(egid)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.seteuid">
+            function <span class="apidocSignatureSpan">posix.</span>seteuid
+            <span class="apidocSignatureSpan">(euid)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.setgid">
+            function <span class="apidocSignatureSpan">posix.</span>setgid
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.sethostname">
+            function <span class="apidocSignatureSpan">posix.</span>sethostname
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.setlogmask">
+            function <span class="apidocSignatureSpan">posix.</span>setlogmask
+            <span class="apidocSignatureSpan">(maskpri)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.setpgid">
+            function <span class="apidocSignatureSpan">posix.</span>setpgid
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.setregid">
+            function <span class="apidocSignatureSpan">posix.</span>setregid
+            <span class="apidocSignatureSpan">(rgid, egid)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.setreuid">
+            function <span class="apidocSignatureSpan">posix.</span>setreuid
+            <span class="apidocSignatureSpan">(ruid, euid)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.setrlimit">
+            function <span class="apidocSignatureSpan">posix.</span>setrlimit
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.setsid">
+            function <span class="apidocSignatureSpan">posix.</span>setsid
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.setuid">
+            function <span class="apidocSignatureSpan">posix.</span>setuid
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.swapoff">
+            function <span class="apidocSignatureSpan">posix.</span>swapoff
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.swapon">
+            function <span class="apidocSignatureSpan">posix.</span>swapon
+            <span class="apidocSignatureSpan">(path, swapflags)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.syslog">
+            function <span class="apidocSignatureSpan">posix.</span>syslog
+            <span class="apidocSignatureSpan">(priority, message)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.posix.chroot">module posix.chroot</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.chroot.chroot">
+            function <span class="apidocSignatureSpan">posix.</span>chroot
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.posix.closelog">module posix.closelog</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.closelog.closelog">
+            function <span class="apidocSignatureSpan">posix.</span>closelog
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.posix.getegid">module posix.getegid</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.getegid.getegid">
+            function <span class="apidocSignatureSpan">posix.</span>getegid
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.posix.geteuid">module posix.geteuid</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.geteuid.geteuid">
+            function <span class="apidocSignatureSpan">posix.</span>geteuid
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.posix.getgid">module posix.getgid</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.getgid.getgid">
+            function <span class="apidocSignatureSpan">posix.</span>getgid
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.posix.getgrnam">module posix.getgrnam</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.getgrnam.getgrnam">
+            function <span class="apidocSignatureSpan">posix.</span>getgrnam
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.posix.gethostname">module posix.gethostname</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.gethostname.gethostname">
+            function <span class="apidocSignatureSpan">posix.</span>gethostname
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.posix.getpgid">module posix.getpgid</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.getpgid.getpgid">
+            function <span class="apidocSignatureSpan">posix.</span>getpgid
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.posix.getpgrp">module posix.getpgrp</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.getpgrp.getpgrp">
+            function <span class="apidocSignatureSpan">posix.</span>getpgrp
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.posix.getppid">module posix.getppid</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.getppid.getppid">
+            function <span class="apidocSignatureSpan">posix.</span>getppid
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.posix.getpwnam">module posix.getpwnam</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.getpwnam.getpwnam">
+            function <span class="apidocSignatureSpan">posix.</span>getpwnam
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.posix.getrlimit">module posix.getrlimit</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.getrlimit.getrlimit">
+            function <span class="apidocSignatureSpan">posix.</span>getrlimit
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.posix.getuid">module posix.getuid</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.getuid.getuid">
+            function <span class="apidocSignatureSpan">posix.</span>getuid
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.posix.initgroups">module posix.initgroups</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.initgroups.initgroups">
+            function <span class="apidocSignatureSpan">posix.</span>initgroups
+            <span class="apidocSignatureSpan">(user, group)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.posix.openlog">module posix.openlog</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.openlog.openlog">
+            function <span class="apidocSignatureSpan">posix.</span>openlog
+            <span class="apidocSignatureSpan">(ident, option, facility)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.posix.setegid">module posix.setegid</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.setegid.setegid">
+            function <span class="apidocSignatureSpan">posix.</span>setegid
+            <span class="apidocSignatureSpan">(egid)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.posix.seteuid">module posix.seteuid</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.seteuid.seteuid">
+            function <span class="apidocSignatureSpan">posix.</span>seteuid
+            <span class="apidocSignatureSpan">(euid)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.posix.setgid">module posix.setgid</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.setgid.setgid">
+            function <span class="apidocSignatureSpan">posix.</span>setgid
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.posix.sethostname">module posix.sethostname</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.sethostname.sethostname">
+            function <span class="apidocSignatureSpan">posix.</span>sethostname
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.posix.setlogmask">module posix.setlogmask</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.setlogmask.setlogmask">
+            function <span class="apidocSignatureSpan">posix.</span>setlogmask
+            <span class="apidocSignatureSpan">(maskpri)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.posix.setpgid">module posix.setpgid</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.setpgid.setpgid">
+            function <span class="apidocSignatureSpan">posix.</span>setpgid
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.posix.setregid">module posix.setregid</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.setregid.setregid">
+            function <span class="apidocSignatureSpan">posix.</span>setregid
+            <span class="apidocSignatureSpan">(rgid, egid)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.posix.setreuid">module posix.setreuid</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.setreuid.setreuid">
+            function <span class="apidocSignatureSpan">posix.</span>setreuid
+            <span class="apidocSignatureSpan">(ruid, euid)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.posix.setrlimit">module posix.setrlimit</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.setrlimit.setrlimit">
+            function <span class="apidocSignatureSpan">posix.</span>setrlimit
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.posix.setsid">module posix.setsid</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.setsid.setsid">
+            function <span class="apidocSignatureSpan">posix.</span>setsid
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.posix.setuid">module posix.setuid</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.setuid.setuid">
+            function <span class="apidocSignatureSpan">posix.</span>setuid
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.posix.swapoff">module posix.swapoff</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.swapoff.swapoff">
+            function <span class="apidocSignatureSpan">posix.</span>swapoff
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.posix.swapon">module posix.swapon</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.swapon.swapon">
+            function <span class="apidocSignatureSpan">posix.</span>swapon
+            <span class="apidocSignatureSpan">(path, swapflags)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.posix.syslog">module posix.syslog</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.posix.syslog.syslog">
+            function <span class="apidocSignatureSpan">posix.</span>syslog
+            <span class="apidocSignatureSpan">(priority, message)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.posix" id="apidoc.module.posix">module posix</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.posix.chroot" id="apidoc.element.posix.chroot">
+        function <span class="apidocSignatureSpan">posix.</span>chroot
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">chroot = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+## General usage
+
+* Installation: `npm install posix`
+* In your code: `var posix = require(&#x27;posix&#x27;);`
+
+## POSIX System Calls
+
+### posix.<span class="apidocCodeKeywordSpan">chroot</span>(path)
+
+Changes the root directory of the calling process to that specified in `path`.
+This directory will be used for pathnames beginning with `/`. The root
+directory is inherited by all children of the calling process.
+
+The working directory is also automatically set to the new root directory.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.posix.closelog" id="apidoc.element.posix.closelog">
+        function <span class="apidocSignatureSpan">posix.</span>closelog
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">closelog = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `&#x27;lpr&#x27;`
+* `&#x27;local0&#x27;` .. `&#x27;local7&#x27;`
+
+Example:
+
+    posix.openlog(&#x27;myprog&#x27;, {odelay: true, pid: true}, &#x27;local7&#x27;);
+
+### posix.<span class="apidocCodeKeywordSpan">closelog</span>()
+
+Close connection to the logger.
+
+### posix.setlogmask(mask)
+
+Sets a priority mask for log messages. Further `posix.syslog()` messages are
+only sent out if their priority is included in the mask. Priorities are listed
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.posix.getegid" id="apidoc.element.posix.getegid">
+        function <span class="apidocSignatureSpan">posix.</span>getegid
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getegid = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* &#x22;How to break out of a `chroot()` jail&#x22;:
+  http://www.bpfh.net/simes/computing/chroot-break.html
+
+Example:
+
+    posix.chroot(&#x27;/somewhere/safe&#x27;);
+
+### posix.<span class="apidocCodeKeywordSpan">getegid</span>()
+
+Returns the current process&#x27;s effective group ID.
+
+    console.log(&#x27;Effective GID: &#x27; + posix.getegid());
+
+### posix.geteuid()
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.posix.geteuid" id="apidoc.element.posix.geteuid">
+        function <span class="apidocSignatureSpan">posix.</span>geteuid
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">geteuid = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### posix.getegid()
+
+Returns the current process&#x27;s effective group ID.
+
+    console.log(&#x27;Effective GID: &#x27; + posix.getegid());
+
+### posix.<span class="apidocCodeKeywordSpan">geteuid</span>()
+
+Returns the current process&#x27;s effective user ID.
+
+    console.log(&#x27;Effective UID: &#x27; + posix.geteuid());
+
+### posix.getgrnam(group)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.posix.getgid" id="apidoc.element.posix.getgid">
+        function <span class="apidocSignatureSpan">posix.</span>getgid
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getgid() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* mmap() http://npm.im/mmap
+* PAM authentication, flock() and mkstemp() http://npm.im/unixlib
+* execvp() http://npm.im/kexec
+
+## General Information
+
+### User and Group ID Management
+* `posix.<span class="apidocCodeKeywordSpan">getgid</span>()` is an alias to Node core `process.getgid()`
+* `posix.getuid()` is an alias to Node core `process.getuid()`
+* `posix.setgid()` is an alias to Node core `process.setgid()`
+* `posix.setuid()` is an alias to Node core `process.setuid()`,
+  NOTE: should be used carefully  due to inconsistent behavior under different
+  operating systems, see http://www.cs.ucdavis.edu/~hchen/paper/usenix02.html
+
+### Resource limits
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.posix.getgrnam" id="apidoc.element.posix.getgrnam">
+        function <span class="apidocSignatureSpan">posix.</span>getgrnam
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getgrnam = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### posix.geteuid()
+
+Returns the current process&#x27;s effective user ID.
+
+console.log(&#x27;Effective UID: &#x27; + posix.geteuid());
+
+### posix.<span class="apidocCodeKeywordSpan">getgrnam</span>(group)
+
+Get the group database entry for the given group. `group` can be specified
+either as a numeric GID or a group name (string).
+
+var util = require(&#x27;util&#x27;);
+util.inspect(posix.getgrnam(&#x27;wheel&#x27;));
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.posix.gethostname" id="apidoc.element.posix.gethostname">
+        function <span class="apidocSignatureSpan">posix.</span>gethostname
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">gethostname = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Example:
+
+    posix.syslog(&#x27;info&#x27;, &#x27;hello, world!&#x27;);
+
+## hostname
+
+### posix.<span class="apidocCodeKeywordSpan">gethostname</span>()
+
+Returns the hostname of the operating system.
+
+### posix.sethostname(hostname)
+
+Sets the hostname of the operating system.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.posix.getpgid" id="apidoc.element.posix.getpgid">
+        function <span class="apidocSignatureSpan">posix.</span>getpgid
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getpgid = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var util = require(&#x27;util&#x27;);
+util.inspect(posix.getgrnam(&#x27;wheel&#x27;));
+
+Example output of above:
+
+{ name: &#x27;wheel&#x27;, passwd: &#x27;*&#x27;, gid: 0, members: [ &#x27;root&#x27; ] }
+
+### posix.<span class="apidocCodeKeywordSpan">getpgid</span>(pid)
+
+Return the process group ID of the current process (`posix.getpgid(0)`) or of
+a process of a given PID (`posix.getpgid(PID)`).
+
+console.log(&#x27;My PGID: &#x27; + posix.getpgid(0));
+console.log(&#x27;init&#x27;s PGID: &#x27; + posix.getpgid(1));
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.posix.getpgrp" id="apidoc.element.posix.getpgrp">
+        function <span class="apidocSignatureSpan">posix.</span>getpgrp
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getpgrp = function () {
+    return posix.getpgid(0);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.posix.getppid" id="apidoc.element.posix.getppid">
+        function <span class="apidocSignatureSpan">posix.</span>getppid
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getppid = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Return the process group ID of the current process (`posix.setpgid(0, PGID)`)
+or of a process of a given PID (`posix.getpgid(PID, PGID)`).
+
+    // move process into it&#x27;s own process group
+    posix.setpgid(process.pid, process.pid)
+
+### posix.<span class="apidocCodeKeywordSpan">getppid</span>()
+
+Returns the parent process&#x27;s PID.
+
+    console.log(&#x27;Parent PID: &#x27; + posix.getppid());
+
+### posix.getpwnam(user)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.posix.getpwnam" id="apidoc.element.posix.getpwnam">
+        function <span class="apidocSignatureSpan">posix.</span>getpwnam
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getpwnam = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### posix.getppid()
+
+Returns the parent process&#x27;s PID.
+
+console.log(&#x27;Parent PID: &#x27; + posix.getppid());
+
+### posix.<span class="apidocCodeKeywordSpan">getpwnam</span>(user)
+
+Get the user database entry for the given user. `user` can be specified either
+as a numeric UID or a username (string).
+
+var util = require(&#x27;util&#x27;);
+util.inspect(posix.getpwnam(&#x27;root&#x27;));
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.posix.getrlimit" id="apidoc.element.posix.getrlimit">
+        function <span class="apidocSignatureSpan">posix.</span>getrlimit
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getrlimit = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      passwd: &#x27;*&#x27;,
+      uid: 0,
+      gid: 0,
+      gecos: &#x27;System Administrator&#x27;,
+      shell: &#x27;/bin/sh&#x27;,
+      dir: &#x27;/var/root&#x27; }
+
+### posix.<span class="apidocCodeKeywordSpan">getrlimit</span>(resource)
+
+Get resource limits. (See getrlimit(2).)
+
+The `soft` limit is the value that the kernel enforces for the
+corresponding resource. The `hard` limit acts as a ceiling for the soft
+limit: an unprivileged process may only set its soft limit to a value in the
+range from 0 up to the hard limit, and (irreversibly) lower its hard limit.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.posix.getuid" id="apidoc.element.posix.getuid">
+        function <span class="apidocSignatureSpan">posix.</span>getuid
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getuid() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* PAM authentication, flock() and mkstemp() http://npm.im/unixlib
+* execvp() http://npm.im/kexec
+
+## General Information
+
+### User and Group ID Management
+* `posix.getgid()` is an alias to Node core `process.getgid()`
+* `posix.<span class="apidocCodeKeywordSpan">getuid</span>()` is an alias to Node core `process.getuid()`
+* `posix.setgid()` is an alias to Node core `process.setgid()`
+* `posix.setuid()` is an alias to Node core `process.setuid()`,
+  NOTE: should be used carefully  due to inconsistent behavior under different
+  operating systems, see http://www.cs.ucdavis.edu/~hchen/paper/usenix02.html
+
+### Resource limits
+* `ulimit()` is obsolete, use `posix.setrlimit()` instead.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.posix.initgroups" id="apidoc.element.posix.initgroups">
+        function <span class="apidocSignatureSpan">posix.</span>initgroups
+        <span class="apidocSignatureSpan">(user, group)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initgroups = function (user, group) {
+    var gid = (typeof (group) === &#x27;string&#x27;) ? posix.getgrnam(group).gid : group;
+    return posix.initgroups(user, gid);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+`&#x27;as&#x27;` (RLIMIT_AS) The maximum size of the process&#x27;s virtual memory (address
+space) in bytes.
+
+    var limits = posix.getrlimit(&#x27;nofile&#x27;);
+    console.log(&#x27;Current limits: soft=&#x27; + limits.soft + &#x27;, max=&#x27; + limits.hard);
+
+### posix.<span class="apidocCodeKeywordSpan">initgroups</span>(user, group)
+
+Sets the group access list to all groups of which user is a member.
+The additional group group is also added to the list.
+
+    posix.initgroups(&#x22;node&#x22;, &#x22;httpd&#x22;);  // all groups of &#x27;node&#x27; plus &#x27;httpd&#x27;
+
+### posix.setegid(gid)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.posix.openlog" id="apidoc.element.posix.openlog">
+        function <span class="apidocSignatureSpan">posix.</span>openlog
+        <span class="apidocSignatureSpan">(ident, option, facility)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">openlog = function (ident, option, facility) {
+    return posix.openlog(ident, syslog_flags(option),
+                         syslog_const(facility));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* A: Please submit a pull request or an issue ticket at
+https://github.com/ohmu/node-posix
+
+## Compatibility and API Stability
+
+* Some degree of POSIX compliance is sought after, but this module is not always
+restricted by the standard.
+For example `posix.<span class="apidocCodeKeywordSpan">openlog</span>()` also supports non-POSIX facility codes.
+* node-posix version format: *MAJOR.MINOR.PATCH*
+* *PATCH* version upgrades will not break backward compatibility, so it should be
+safe to upgrade from 1.0.0 to 1.0.1, 1.0.2, etc.
+* *MAJOR* and *MINOR* version upgrades *probably* break backward-compatibility in
+some way, which may or may not affect your module.
+* Recommended way to define a version dependency to node-posix in your
+`package.json`: `&#x22;dependencies&#x22;: { &#x22;posix&#x22;: &#x22;1.0.x&#x22; }`
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.posix.setegid" id="apidoc.element.posix.setegid">
+        function <span class="apidocSignatureSpan">posix.</span>setegid
+        <span class="apidocSignatureSpan">(egid)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setegid = function (egid) {
+    egid = (typeof (egid) === &#x27;string&#x27;) ? posix.getgrnam(egid).gid : egid;
+    return posix.setegid(egid);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### posix.initgroups(user, group)
+
+Sets the group access list to all groups of which user is a member.
+The additional group group is also added to the list.
+
+posix.initgroups(&#x22;node&#x22;, &#x22;httpd&#x22;);  // all groups of &#x27;node&#x27; plus &#x27;httpd&#x27;
+
+### posix.<span class="apidocCodeKeywordSpan">setegid</span>(gid)
+
+Sets the Effective group ID of the current process. `gid` can be either a
+numeric GID or a group name (string).
+
+posix.setegid(0); // set effective group UID to &#x22;wheel&#x22;
+posix.setegid(&#x27;nobody&#x27;);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.posix.seteuid" id="apidoc.element.posix.seteuid">
+        function <span class="apidocSignatureSpan">posix.</span>seteuid
+        <span class="apidocSignatureSpan">(euid)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">seteuid = function (euid) {
+    euid = (typeof (euid) === &#x27;string&#x27;) ? posix.getpwnam(euid).uid : euid;
+    return posix.seteuid(euid);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Sets the Effective group ID of the current process. `gid` can be either a
+numeric GID or a group name (string).
+
+posix.setegid(0); // set effective group UID to &#x22;wheel&#x22;
+posix.setegid(&#x27;nobody&#x27;);
+
+### posix.<span class="apidocCodeKeywordSpan">seteuid</span>(uid)
+
+Sets the Effective user ID of the current process. `uid` can be either a
+numeric UID or a username (string).
+
+posix.seteuid(0); // set effective UID to &#x22;root&#x22;
+posix.seteuid(&#x27;nobody&#x27;);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.posix.setgid" id="apidoc.element.posix.setgid">
+        function <span class="apidocSignatureSpan">posix.</span>setgid
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setgid() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* execvp() http://npm.im/kexec
+
+## General Information
+
+### User and Group ID Management
+* `posix.getgid()` is an alias to Node core `process.getgid()`
+* `posix.getuid()` is an alias to Node core `process.getuid()`
+* `posix.<span class="apidocCodeKeywordSpan">setgid</span>()` is an alias to Node core `process.setgid()`
+* `posix.setuid()` is an alias to Node core `process.setuid()`,
+  NOTE: should be used carefully  due to inconsistent behavior under different
+  operating systems, see http://www.cs.ucdavis.edu/~hchen/paper/usenix02.html
+
+### Resource limits
+* `ulimit()` is obsolete, use `posix.setrlimit()` instead.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.posix.sethostname" id="apidoc.element.posix.sethostname">
+        function <span class="apidocSignatureSpan">posix.</span>sethostname
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sethostname = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+## hostname
+
+### posix.gethostname()
+
+Returns the hostname of the operating system.
+
+### posix.<span class="apidocCodeKeywordSpan">sethostname</span>(hostname)
+
+Sets the hostname of the operating system.
+
+Example:
+
+posix.sethostname(&#x27;beefheart&#x27;);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.posix.setlogmask" id="apidoc.element.posix.setlogmask">
+        function <span class="apidocSignatureSpan">posix.</span>setlogmask
+        <span class="apidocSignatureSpan">(maskpri)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setlogmask = function (maskpri) {
+    var bits = posix.setlogmask(syslog_flags(maskpri, &#x22;mask_&#x22;)), flags = {}, key;
+    for (key in syslog_constants) {
+        if (key.match(&#x22;^mask_&#x22;)) {
+            flags[key.substr(5, 10)] = (bits &#x26; syslog_constants[key])
+                ? true : false;
+        }
+    }
+    return flags;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+posix.openlog(&#x27;myprog&#x27;, {odelay: true, pid: true}, &#x27;local7&#x27;);
+
+### posix.closelog()
+
+Close connection to the logger.
+
+### posix.<span class="apidocCodeKeywordSpan">setlogmask</span>(mask)
+
+Sets a priority mask for log messages. Further `posix.syslog()` messages are
+only sent out if their priority is included in the mask. Priorities are listed
+under `posix.syslog()`.
+
+// only send the most critical messages
+posix.setlogmask({emerg:true, alert: true, crit: true});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.posix.setpgid" id="apidoc.element.posix.setpgid">
+        function <span class="apidocSignatureSpan">posix.</span>setpgid
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setpgid = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Return the process group ID of the current process (`posix.getpgid(0)`) or of
+a process of a given PID (`posix.getpgid(PID)`).
+
+console.log(&#x27;My PGID: &#x27; + posix.getpgid(0));
+console.log(&#x27;init&#x27;s PGID: &#x27; + posix.getpgid(1));
+
+### posix.<span class="apidocCodeKeywordSpan">setpgid</span>(pid)
+
+Return the process group ID of the current process (`posix.setpgid(0, PGID)`)
+or of a process of a given PID (`posix.getpgid(PID, PGID)`).
+
+// move process into it&#x27;s own process group
+posix.setpgid(process.pid, process.pid)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.posix.setregid" id="apidoc.element.posix.setregid">
+        function <span class="apidocSignatureSpan">posix.</span>setregid
+        <span class="apidocSignatureSpan">(rgid, egid)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setregid = function (rgid, egid) {
+    rgid = (typeof (rgid) === &#x27;string&#x27;) ? posix.getgrnam(rgid).gid : rgid;
+    egid = (typeof (egid) === &#x27;string&#x27;) ? posix.getgrnam(egid).gid : egid;
+    return posix.setregid(rgid, egid);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Sets the Effective user ID of the current process. `uid` can be either a
+numeric UID or a username (string).
+
+posix.seteuid(0); // set effective UID to &#x22;root&#x22;
+posix.seteuid(&#x27;nobody&#x27;);
+
+### posix.<span class="apidocCodeKeywordSpan">setregid</span>(rgid, egid)
+
+Sets the Real and Effective group IDs of the current process. `rgid` and `egid`
+can be either a numeric UIDs or group names (strings). A value of `-1` means
+that the corresponding GID is left unchanged.
+
+posix.setregid(-1, 1000); // just set the EGID to 1000
+posix.setregid(&#x27;www-data&#x27;, &#x27;www-data&#x27;); // change both RGID and EGID to &#x22;www-data&#x22;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.posix.setreuid" id="apidoc.element.posix.setreuid">
+        function <span class="apidocSignatureSpan">posix.</span>setreuid
+        <span class="apidocSignatureSpan">(ruid, euid)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setreuid = function (ruid, euid) {
+    ruid = (typeof (ruid) === &#x27;string&#x27;) ? posix.getpwnam(ruid).uid : ruid;
+    euid = (typeof (euid) === &#x27;string&#x27;) ? posix.getpwnam(euid).uid : euid;
+    return posix.setreuid(ruid, euid);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Sets the Real and Effective group IDs of the current process. `rgid` and `egid`
+can be either a numeric UIDs or group names (strings). A value of `-1` means
+that the corresponding GID is left unchanged.
+
+    posix.setregid(-1, 1000); // just set the EGID to 1000
+    posix.setregid(&#x27;www-data&#x27;, &#x27;www-data&#x27;); // change both RGID and EGID to &#x22;www-data&#x22;
+
+### posix.<span class="apidocCodeKeywordSpan">setreuid</span>(ruid, euid)
+
+Sets the Real and Effective user IDs of the current process. `ruid` and `euid`
+can be either a numeric UIDs or usernames (strings). A value of `-1` means
+that the corresponding UID is left unchanged.
+
+IMPORTANT NOTE: what happens to the Saved UID when `setreuid()` is called is
+operating system dependent. For example on OSX the Saved UID seems to be set
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.posix.setrlimit" id="apidoc.element.posix.setrlimit">
+        function <span class="apidocSignatureSpan">posix.</span>setrlimit
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setrlimit = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `posix.getuid()` is an alias to Node core `process.getuid()`
+* `posix.setgid()` is an alias to Node core `process.setgid()`
+* `posix.setuid()` is an alias to Node core `process.setuid()`,
+  NOTE: should be used carefully  due to inconsistent behavior under different
+  operating systems, see http://www.cs.ucdavis.edu/~hchen/paper/usenix02.html
+
+### Resource limits
+* `ulimit()` is obsolete, use `posix.<span class="apidocCodeKeywordSpan">setrlimit</span>()` instead.
+
+## General usage
+
+* Installation: `npm install posix`
+* In your code: `var posix = require(&#x27;posix&#x27;);`
+
+## POSIX System Calls
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.posix.setsid" id="apidoc.element.posix.setsid">
+        function <span class="apidocSignatureSpan">posix.</span>setsid
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setsid = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    // raise maximum number of open file descriptors to 10k, hard limit is left unchanged
+    posix.setrlimit(&#x27;nofile&#x27;, { soft: 10000 });
+
+    // enable core dumps of unlimited size
+    posix.setrlimit(&#x27;core&#x27;, { soft: null, hard: null });
+
+### posix.<span class="apidocCodeKeywordSpan">setsid</span>()
+
+Creates a session and sets the process group ID. Returns the process group ID.
+
+    console.log(&#x27;Session ID: &#x27; + posix.setsid());
+
+## Syslog
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.posix.setuid" id="apidoc.element.posix.setuid">
+        function <span class="apidocSignatureSpan">posix.</span>setuid
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setuid() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+## General Information
+
+### User and Group ID Management
+* `posix.getgid()` is an alias to Node core `process.getgid()`
+* `posix.getuid()` is an alias to Node core `process.getuid()`
+* `posix.setgid()` is an alias to Node core `process.setgid()`
+* `posix.<span class="apidocCodeKeywordSpan">setuid</span>()` is an alias to Node core `process.setuid()`,
+  NOTE: should be used carefully  due to inconsistent behavior under different
+  operating systems, see http://www.cs.ucdavis.edu/~hchen/paper/usenix02.html
+
+### Resource limits
+* `ulimit()` is obsolete, use `posix.setrlimit()` instead.
+
+## General usage
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.posix.swapoff" id="apidoc.element.posix.swapoff">
+        function <span class="apidocSignatureSpan">posix.</span>swapoff
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">swapoff = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### posix.swapon(path, swapflags)
+
+Enable the swap device located at `path`. `swapflags` is an optional array of
+strings to define the flags of the swap device, being available `prefer` and
+`discard`.
+
+### posix.<span class="apidocCodeKeywordSpan">swapoff</span>(path)
+
+Disable the swap device located at `path`.
+
+## Credits
+
+* Some of the documentation strings stolen from Linux man pages.
+* `posix.seteuid` etc. implementation is based on Node core project `SetUid`
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.posix.swapon" id="apidoc.element.posix.swapon">
+        function <span class="apidocSignatureSpan">posix.</span>swapon
+        <span class="apidocSignatureSpan">(path, swapflags)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">swapon = function (path, swapflags) {
+    return posix.swapon(path, swap_flags(swapflags));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Example:
+
+    posix.sethostname(&#x27;beefheart&#x27;);
+
+## swap
+
+### posix.<span class="apidocCodeKeywordSpan">swapon</span>(path, swapflags)
+
+Enable the swap device located at `path`. `swapflags` is an optional array of
+strings to define the flags of the swap device, being available `prefer` and
+`discard`.
+
+### posix.swapoff(path)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.posix.syslog" id="apidoc.element.posix.syslog">
+        function <span class="apidocSignatureSpan">posix.</span>syslog
+        <span class="apidocSignatureSpan">(priority, message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">syslog = function (priority, message) {
+    return posix.syslog(syslog_const(priority), message);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### posix.closelog()
+
+Close connection to the logger.
+
+### posix.setlogmask(mask)
+
+Sets a priority mask for log messages. Further `posix.<span class="apidocCodeKeywordSpan">syslog</span>()` messages are
+only sent out if their priority is included in the mask. Priorities are listed
+under `posix.syslog()`.
+
+    // only send the most critical messages
+    posix.setlogmask({emerg:true, alert: true, crit: true});
+
+### posix.syslog(priority, message)
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.posix.chroot" id="apidoc.module.posix.chroot">module posix.chroot</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.posix.chroot.chroot" id="apidoc.element.posix.chroot.chroot">
+        function <span class="apidocSignatureSpan">posix.</span>chroot
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">chroot = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+## General usage
+
+* Installation: `npm install posix`
+* In your code: `var posix = require(&#x27;posix&#x27;);`
+
+## POSIX System Calls
+
+### posix.<span class="apidocCodeKeywordSpan">chroot</span>(path)
+
+Changes the root directory of the calling process to that specified in `path`.
+This directory will be used for pathnames beginning with `/`. The root
+directory is inherited by all children of the calling process.
+
+The working directory is also automatically set to the new root directory.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.posix.closelog" id="apidoc.module.posix.closelog">module posix.closelog</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.posix.closelog.closelog" id="apidoc.element.posix.closelog.closelog">
+        function <span class="apidocSignatureSpan">posix.</span>closelog
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">closelog = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `&#x27;lpr&#x27;`
+* `&#x27;local0&#x27;` .. `&#x27;local7&#x27;`
+
+Example:
+
+    posix.openlog(&#x27;myprog&#x27;, {odelay: true, pid: true}, &#x27;local7&#x27;);
+
+### posix.<span class="apidocCodeKeywordSpan">closelog</span>()
+
+Close connection to the logger.
+
+### posix.setlogmask(mask)
+
+Sets a priority mask for log messages. Further `posix.syslog()` messages are
+only sent out if their priority is included in the mask. Priorities are listed
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.posix.getegid" id="apidoc.module.posix.getegid">module posix.getegid</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.posix.getegid.getegid" id="apidoc.element.posix.getegid.getegid">
+        function <span class="apidocSignatureSpan">posix.</span>getegid
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getegid = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* &#x22;How to break out of a `chroot()` jail&#x22;:
+  http://www.bpfh.net/simes/computing/chroot-break.html
+
+Example:
+
+    posix.chroot(&#x27;/somewhere/safe&#x27;);
+
+### posix.<span class="apidocCodeKeywordSpan">getegid</span>()
+
+Returns the current process&#x27;s effective group ID.
+
+    console.log(&#x27;Effective GID: &#x27; + posix.getegid());
+
+### posix.geteuid()
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.posix.geteuid" id="apidoc.module.posix.geteuid">module posix.geteuid</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.posix.geteuid.geteuid" id="apidoc.element.posix.geteuid.geteuid">
+        function <span class="apidocSignatureSpan">posix.</span>geteuid
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">geteuid = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### posix.getegid()
+
+Returns the current process&#x27;s effective group ID.
+
+    console.log(&#x27;Effective GID: &#x27; + posix.getegid());
+
+### posix.<span class="apidocCodeKeywordSpan">geteuid</span>()
+
+Returns the current process&#x27;s effective user ID.
+
+    console.log(&#x27;Effective UID: &#x27; + posix.geteuid());
+
+### posix.getgrnam(group)
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.posix.getgid" id="apidoc.module.posix.getgid">module posix.getgid</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.posix.getgid.getgid" id="apidoc.element.posix.getgid.getgid">
+        function <span class="apidocSignatureSpan">posix.</span>getgid
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getgid() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* mmap() http://npm.im/mmap
+* PAM authentication, flock() and mkstemp() http://npm.im/unixlib
+* execvp() http://npm.im/kexec
+
+## General Information
+
+### User and Group ID Management
+* `posix.<span class="apidocCodeKeywordSpan">getgid</span>()` is an alias to Node core `process.getgid()`
+* `posix.getuid()` is an alias to Node core `process.getuid()`
+* `posix.setgid()` is an alias to Node core `process.setgid()`
+* `posix.setuid()` is an alias to Node core `process.setuid()`,
+  NOTE: should be used carefully  due to inconsistent behavior under different
+  operating systems, see http://www.cs.ucdavis.edu/~hchen/paper/usenix02.html
+
+### Resource limits
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.posix.getgrnam" id="apidoc.module.posix.getgrnam">module posix.getgrnam</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.posix.getgrnam.getgrnam" id="apidoc.element.posix.getgrnam.getgrnam">
+        function <span class="apidocSignatureSpan">posix.</span>getgrnam
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getgrnam = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### posix.geteuid()
+
+Returns the current process&#x27;s effective user ID.
+
+console.log(&#x27;Effective UID: &#x27; + posix.geteuid());
+
+### posix.<span class="apidocCodeKeywordSpan">getgrnam</span>(group)
+
+Get the group database entry for the given group. `group` can be specified
+either as a numeric GID or a group name (string).
+
+var util = require(&#x27;util&#x27;);
+util.inspect(posix.getgrnam(&#x27;wheel&#x27;));
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.posix.gethostname" id="apidoc.module.posix.gethostname">module posix.gethostname</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.posix.gethostname.gethostname" id="apidoc.element.posix.gethostname.gethostname">
+        function <span class="apidocSignatureSpan">posix.</span>gethostname
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">gethostname = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Example:
+
+    posix.syslog(&#x27;info&#x27;, &#x27;hello, world!&#x27;);
+
+## hostname
+
+### posix.<span class="apidocCodeKeywordSpan">gethostname</span>()
+
+Returns the hostname of the operating system.
+
+### posix.sethostname(hostname)
+
+Sets the hostname of the operating system.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.posix.getpgid" id="apidoc.module.posix.getpgid">module posix.getpgid</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.posix.getpgid.getpgid" id="apidoc.element.posix.getpgid.getpgid">
+        function <span class="apidocSignatureSpan">posix.</span>getpgid
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getpgid = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var util = require(&#x27;util&#x27;);
+util.inspect(posix.getgrnam(&#x27;wheel&#x27;));
+
+Example output of above:
+
+{ name: &#x27;wheel&#x27;, passwd: &#x27;*&#x27;, gid: 0, members: [ &#x27;root&#x27; ] }
+
+### posix.<span class="apidocCodeKeywordSpan">getpgid</span>(pid)
+
+Return the process group ID of the current process (`posix.getpgid(0)`) or of
+a process of a given PID (`posix.getpgid(PID)`).
+
+console.log(&#x27;My PGID: &#x27; + posix.getpgid(0));
+console.log(&#x27;init&#x27;s PGID: &#x27; + posix.getpgid(1));
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.posix.getpgrp" id="apidoc.module.posix.getpgrp">module posix.getpgrp</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.posix.getpgrp.getpgrp" id="apidoc.element.posix.getpgrp.getpgrp">
+        function <span class="apidocSignatureSpan">posix.</span>getpgrp
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getpgrp = function () {
+    return posix.getpgid(0);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.posix.getppid" id="apidoc.module.posix.getppid">module posix.getppid</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.posix.getppid.getppid" id="apidoc.element.posix.getppid.getppid">
+        function <span class="apidocSignatureSpan">posix.</span>getppid
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getppid = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Return the process group ID of the current process (`posix.setpgid(0, PGID)`)
+or of a process of a given PID (`posix.getpgid(PID, PGID)`).
+
+    // move process into it&#x27;s own process group
+    posix.setpgid(process.pid, process.pid)
+
+### posix.<span class="apidocCodeKeywordSpan">getppid</span>()
+
+Returns the parent process&#x27;s PID.
+
+    console.log(&#x27;Parent PID: &#x27; + posix.getppid());
+
+### posix.getpwnam(user)
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.posix.getpwnam" id="apidoc.module.posix.getpwnam">module posix.getpwnam</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.posix.getpwnam.getpwnam" id="apidoc.element.posix.getpwnam.getpwnam">
+        function <span class="apidocSignatureSpan">posix.</span>getpwnam
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getpwnam = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### posix.getppid()
+
+Returns the parent process&#x27;s PID.
+
+console.log(&#x27;Parent PID: &#x27; + posix.getppid());
+
+### posix.<span class="apidocCodeKeywordSpan">getpwnam</span>(user)
+
+Get the user database entry for the given user. `user` can be specified either
+as a numeric UID or a username (string).
+
+var util = require(&#x27;util&#x27;);
+util.inspect(posix.getpwnam(&#x27;root&#x27;));
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.posix.getrlimit" id="apidoc.module.posix.getrlimit">module posix.getrlimit</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.posix.getrlimit.getrlimit" id="apidoc.element.posix.getrlimit.getrlimit">
+        function <span class="apidocSignatureSpan">posix.</span>getrlimit
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getrlimit = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      passwd: &#x27;*&#x27;,
+      uid: 0,
+      gid: 0,
+      gecos: &#x27;System Administrator&#x27;,
+      shell: &#x27;/bin/sh&#x27;,
+      dir: &#x27;/var/root&#x27; }
+
+### posix.<span class="apidocCodeKeywordSpan">getrlimit</span>(resource)
+
+Get resource limits. (See getrlimit(2).)
+
+The `soft` limit is the value that the kernel enforces for the
+corresponding resource. The `hard` limit acts as a ceiling for the soft
+limit: an unprivileged process may only set its soft limit to a value in the
+range from 0 up to the hard limit, and (irreversibly) lower its hard limit.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.posix.getuid" id="apidoc.module.posix.getuid">module posix.getuid</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.posix.getuid.getuid" id="apidoc.element.posix.getuid.getuid">
+        function <span class="apidocSignatureSpan">posix.</span>getuid
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getuid() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* PAM authentication, flock() and mkstemp() http://npm.im/unixlib
+* execvp() http://npm.im/kexec
+
+## General Information
+
+### User and Group ID Management
+* `posix.getgid()` is an alias to Node core `process.getgid()`
+* `posix.<span class="apidocCodeKeywordSpan">getuid</span>()` is an alias to Node core `process.getuid()`
+* `posix.setgid()` is an alias to Node core `process.setgid()`
+* `posix.setuid()` is an alias to Node core `process.setuid()`,
+  NOTE: should be used carefully  due to inconsistent behavior under different
+  operating systems, see http://www.cs.ucdavis.edu/~hchen/paper/usenix02.html
+
+### Resource limits
+* `ulimit()` is obsolete, use `posix.setrlimit()` instead.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.posix.initgroups" id="apidoc.module.posix.initgroups">module posix.initgroups</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.posix.initgroups.initgroups" id="apidoc.element.posix.initgroups.initgroups">
+        function <span class="apidocSignatureSpan">posix.</span>initgroups
+        <span class="apidocSignatureSpan">(user, group)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initgroups = function (user, group) {
+    var gid = (typeof (group) === &#x27;string&#x27;) ? posix.getgrnam(group).gid : group;
+    return posix.initgroups(user, gid);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+`&#x27;as&#x27;` (RLIMIT_AS) The maximum size of the process&#x27;s virtual memory (address
+space) in bytes.
+
+    var limits = posix.getrlimit(&#x27;nofile&#x27;);
+    console.log(&#x27;Current limits: soft=&#x27; + limits.soft + &#x27;, max=&#x27; + limits.hard);
+
+### posix.<span class="apidocCodeKeywordSpan">initgroups</span>(user, group)
+
+Sets the group access list to all groups of which user is a member.
+The additional group group is also added to the list.
+
+    posix.initgroups(&#x22;node&#x22;, &#x22;httpd&#x22;);  // all groups of &#x27;node&#x27; plus &#x27;httpd&#x27;
+
+### posix.setegid(gid)
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.posix.openlog" id="apidoc.module.posix.openlog">module posix.openlog</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.posix.openlog.openlog" id="apidoc.element.posix.openlog.openlog">
+        function <span class="apidocSignatureSpan">posix.</span>openlog
+        <span class="apidocSignatureSpan">(ident, option, facility)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">openlog = function (ident, option, facility) {
+    return posix.openlog(ident, syslog_flags(option),
+                         syslog_const(facility));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* A: Please submit a pull request or an issue ticket at
+https://github.com/ohmu/node-posix
+
+## Compatibility and API Stability
+
+* Some degree of POSIX compliance is sought after, but this module is not always
+restricted by the standard.
+For example `posix.<span class="apidocCodeKeywordSpan">openlog</span>()` also supports non-POSIX facility codes.
+* node-posix version format: *MAJOR.MINOR.PATCH*
+* *PATCH* version upgrades will not break backward compatibility, so it should be
+safe to upgrade from 1.0.0 to 1.0.1, 1.0.2, etc.
+* *MAJOR* and *MINOR* version upgrades *probably* break backward-compatibility in
+some way, which may or may not affect your module.
+* Recommended way to define a version dependency to node-posix in your
+`package.json`: `&#x22;dependencies&#x22;: { &#x22;posix&#x22;: &#x22;1.0.x&#x22; }`
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.posix.setegid" id="apidoc.module.posix.setegid">module posix.setegid</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.posix.setegid.setegid" id="apidoc.element.posix.setegid.setegid">
+        function <span class="apidocSignatureSpan">posix.</span>setegid
+        <span class="apidocSignatureSpan">(egid)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setegid = function (egid) {
+    egid = (typeof (egid) === &#x27;string&#x27;) ? posix.getgrnam(egid).gid : egid;
+    return posix.setegid(egid);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### posix.initgroups(user, group)
+
+Sets the group access list to all groups of which user is a member.
+The additional group group is also added to the list.
+
+posix.initgroups(&#x22;node&#x22;, &#x22;httpd&#x22;);  // all groups of &#x27;node&#x27; plus &#x27;httpd&#x27;
+
+### posix.<span class="apidocCodeKeywordSpan">setegid</span>(gid)
+
+Sets the Effective group ID of the current process. `gid` can be either a
+numeric GID or a group name (string).
+
+posix.setegid(0); // set effective group UID to &#x22;wheel&#x22;
+posix.setegid(&#x27;nobody&#x27;);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.posix.seteuid" id="apidoc.module.posix.seteuid">module posix.seteuid</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.posix.seteuid.seteuid" id="apidoc.element.posix.seteuid.seteuid">
+        function <span class="apidocSignatureSpan">posix.</span>seteuid
+        <span class="apidocSignatureSpan">(euid)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">seteuid = function (euid) {
+    euid = (typeof (euid) === &#x27;string&#x27;) ? posix.getpwnam(euid).uid : euid;
+    return posix.seteuid(euid);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Sets the Effective group ID of the current process. `gid` can be either a
+numeric GID or a group name (string).
+
+posix.setegid(0); // set effective group UID to &#x22;wheel&#x22;
+posix.setegid(&#x27;nobody&#x27;);
+
+### posix.<span class="apidocCodeKeywordSpan">seteuid</span>(uid)
+
+Sets the Effective user ID of the current process. `uid` can be either a
+numeric UID or a username (string).
+
+posix.seteuid(0); // set effective UID to &#x22;root&#x22;
+posix.seteuid(&#x27;nobody&#x27;);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.posix.setgid" id="apidoc.module.posix.setgid">module posix.setgid</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.posix.setgid.setgid" id="apidoc.element.posix.setgid.setgid">
+        function <span class="apidocSignatureSpan">posix.</span>setgid
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setgid() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* execvp() http://npm.im/kexec
+
+## General Information
+
+### User and Group ID Management
+* `posix.getgid()` is an alias to Node core `process.getgid()`
+* `posix.getuid()` is an alias to Node core `process.getuid()`
+* `posix.<span class="apidocCodeKeywordSpan">setgid</span>()` is an alias to Node core `process.setgid()`
+* `posix.setuid()` is an alias to Node core `process.setuid()`,
+  NOTE: should be used carefully  due to inconsistent behavior under different
+  operating systems, see http://www.cs.ucdavis.edu/~hchen/paper/usenix02.html
+
+### Resource limits
+* `ulimit()` is obsolete, use `posix.setrlimit()` instead.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.posix.sethostname" id="apidoc.module.posix.sethostname">module posix.sethostname</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.posix.sethostname.sethostname" id="apidoc.element.posix.sethostname.sethostname">
+        function <span class="apidocSignatureSpan">posix.</span>sethostname
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sethostname = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+## hostname
+
+### posix.gethostname()
+
+Returns the hostname of the operating system.
+
+### posix.<span class="apidocCodeKeywordSpan">sethostname</span>(hostname)
+
+Sets the hostname of the operating system.
+
+Example:
+
+posix.sethostname(&#x27;beefheart&#x27;);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.posix.setlogmask" id="apidoc.module.posix.setlogmask">module posix.setlogmask</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.posix.setlogmask.setlogmask" id="apidoc.element.posix.setlogmask.setlogmask">
+        function <span class="apidocSignatureSpan">posix.</span>setlogmask
+        <span class="apidocSignatureSpan">(maskpri)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setlogmask = function (maskpri) {
+    var bits = posix.setlogmask(syslog_flags(maskpri, &#x22;mask_&#x22;)), flags = {}, key;
+    for (key in syslog_constants) {
+        if (key.match(&#x22;^mask_&#x22;)) {
+            flags[key.substr(5, 10)] = (bits &#x26; syslog_constants[key])
+                ? true : false;
+        }
+    }
+    return flags;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+posix.openlog(&#x27;myprog&#x27;, {odelay: true, pid: true}, &#x27;local7&#x27;);
+
+### posix.closelog()
+
+Close connection to the logger.
+
+### posix.<span class="apidocCodeKeywordSpan">setlogmask</span>(mask)
+
+Sets a priority mask for log messages. Further `posix.syslog()` messages are
+only sent out if their priority is included in the mask. Priorities are listed
+under `posix.syslog()`.
+
+// only send the most critical messages
+posix.setlogmask({emerg:true, alert: true, crit: true});
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.posix.setpgid" id="apidoc.module.posix.setpgid">module posix.setpgid</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.posix.setpgid.setpgid" id="apidoc.element.posix.setpgid.setpgid">
+        function <span class="apidocSignatureSpan">posix.</span>setpgid
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setpgid = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Return the process group ID of the current process (`posix.getpgid(0)`) or of
+a process of a given PID (`posix.getpgid(PID)`).
+
+console.log(&#x27;My PGID: &#x27; + posix.getpgid(0));
+console.log(&#x27;init&#x27;s PGID: &#x27; + posix.getpgid(1));
+
+### posix.<span class="apidocCodeKeywordSpan">setpgid</span>(pid)
+
+Return the process group ID of the current process (`posix.setpgid(0, PGID)`)
+or of a process of a given PID (`posix.getpgid(PID, PGID)`).
+
+// move process into it&#x27;s own process group
+posix.setpgid(process.pid, process.pid)
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.posix.setregid" id="apidoc.module.posix.setregid">module posix.setregid</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.posix.setregid.setregid" id="apidoc.element.posix.setregid.setregid">
+        function <span class="apidocSignatureSpan">posix.</span>setregid
+        <span class="apidocSignatureSpan">(rgid, egid)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setregid = function (rgid, egid) {
+    rgid = (typeof (rgid) === &#x27;string&#x27;) ? posix.getgrnam(rgid).gid : rgid;
+    egid = (typeof (egid) === &#x27;string&#x27;) ? posix.getgrnam(egid).gid : egid;
+    return posix.setregid(rgid, egid);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Sets the Effective user ID of the current process. `uid` can be either a
+numeric UID or a username (string).
+
+posix.seteuid(0); // set effective UID to &#x22;root&#x22;
+posix.seteuid(&#x27;nobody&#x27;);
+
+### posix.<span class="apidocCodeKeywordSpan">setregid</span>(rgid, egid)
+
+Sets the Real and Effective group IDs of the current process. `rgid` and `egid`
+can be either a numeric UIDs or group names (strings). A value of `-1` means
+that the corresponding GID is left unchanged.
+
+posix.setregid(-1, 1000); // just set the EGID to 1000
+posix.setregid(&#x27;www-data&#x27;, &#x27;www-data&#x27;); // change both RGID and EGID to &#x22;www-data&#x22;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.posix.setreuid" id="apidoc.module.posix.setreuid">module posix.setreuid</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.posix.setreuid.setreuid" id="apidoc.element.posix.setreuid.setreuid">
+        function <span class="apidocSignatureSpan">posix.</span>setreuid
+        <span class="apidocSignatureSpan">(ruid, euid)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setreuid = function (ruid, euid) {
+    ruid = (typeof (ruid) === &#x27;string&#x27;) ? posix.getpwnam(ruid).uid : ruid;
+    euid = (typeof (euid) === &#x27;string&#x27;) ? posix.getpwnam(euid).uid : euid;
+    return posix.setreuid(ruid, euid);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Sets the Real and Effective group IDs of the current process. `rgid` and `egid`
+can be either a numeric UIDs or group names (strings). A value of `-1` means
+that the corresponding GID is left unchanged.
+
+    posix.setregid(-1, 1000); // just set the EGID to 1000
+    posix.setregid(&#x27;www-data&#x27;, &#x27;www-data&#x27;); // change both RGID and EGID to &#x22;www-data&#x22;
+
+### posix.<span class="apidocCodeKeywordSpan">setreuid</span>(ruid, euid)
+
+Sets the Real and Effective user IDs of the current process. `ruid` and `euid`
+can be either a numeric UIDs or usernames (strings). A value of `-1` means
+that the corresponding UID is left unchanged.
+
+IMPORTANT NOTE: what happens to the Saved UID when `setreuid()` is called is
+operating system dependent. For example on OSX the Saved UID seems to be set
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.posix.setrlimit" id="apidoc.module.posix.setrlimit">module posix.setrlimit</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.posix.setrlimit.setrlimit" id="apidoc.element.posix.setrlimit.setrlimit">
+        function <span class="apidocSignatureSpan">posix.</span>setrlimit
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setrlimit = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `posix.getuid()` is an alias to Node core `process.getuid()`
+* `posix.setgid()` is an alias to Node core `process.setgid()`
+* `posix.setuid()` is an alias to Node core `process.setuid()`,
+  NOTE: should be used carefully  due to inconsistent behavior under different
+  operating systems, see http://www.cs.ucdavis.edu/~hchen/paper/usenix02.html
+
+### Resource limits
+* `ulimit()` is obsolete, use `posix.<span class="apidocCodeKeywordSpan">setrlimit</span>()` instead.
+
+## General usage
+
+* Installation: `npm install posix`
+* In your code: `var posix = require(&#x27;posix&#x27;);`
+
+## POSIX System Calls
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.posix.setsid" id="apidoc.module.posix.setsid">module posix.setsid</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.posix.setsid.setsid" id="apidoc.element.posix.setsid.setsid">
+        function <span class="apidocSignatureSpan">posix.</span>setsid
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setsid = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    // raise maximum number of open file descriptors to 10k, hard limit is left unchanged
+    posix.setrlimit(&#x27;nofile&#x27;, { soft: 10000 });
+
+    // enable core dumps of unlimited size
+    posix.setrlimit(&#x27;core&#x27;, { soft: null, hard: null });
+
+### posix.<span class="apidocCodeKeywordSpan">setsid</span>()
+
+Creates a session and sets the process group ID. Returns the process group ID.
+
+    console.log(&#x27;Session ID: &#x27; + posix.setsid());
+
+## Syslog
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.posix.setuid" id="apidoc.module.posix.setuid">module posix.setuid</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.posix.setuid.setuid" id="apidoc.element.posix.setuid.setuid">
+        function <span class="apidocSignatureSpan">posix.</span>setuid
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setuid() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+## General Information
+
+### User and Group ID Management
+* `posix.getgid()` is an alias to Node core `process.getgid()`
+* `posix.getuid()` is an alias to Node core `process.getuid()`
+* `posix.setgid()` is an alias to Node core `process.setgid()`
+* `posix.<span class="apidocCodeKeywordSpan">setuid</span>()` is an alias to Node core `process.setuid()`,
+  NOTE: should be used carefully  due to inconsistent behavior under different
+  operating systems, see http://www.cs.ucdavis.edu/~hchen/paper/usenix02.html
+
+### Resource limits
+* `ulimit()` is obsolete, use `posix.setrlimit()` instead.
+
+## General usage
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.posix.swapoff" id="apidoc.module.posix.swapoff">module posix.swapoff</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.posix.swapoff.swapoff" id="apidoc.element.posix.swapoff.swapoff">
+        function <span class="apidocSignatureSpan">posix.</span>swapoff
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">swapoff = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### posix.swapon(path, swapflags)
+
+Enable the swap device located at `path`. `swapflags` is an optional array of
+strings to define the flags of the swap device, being available `prefer` and
+`discard`.
+
+### posix.<span class="apidocCodeKeywordSpan">swapoff</span>(path)
+
+Disable the swap device located at `path`.
+
+## Credits
+
+* Some of the documentation strings stolen from Linux man pages.
+* `posix.seteuid` etc. implementation is based on Node core project `SetUid`
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.posix.swapon" id="apidoc.module.posix.swapon">module posix.swapon</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.posix.swapon.swapon" id="apidoc.element.posix.swapon.swapon">
+        function <span class="apidocSignatureSpan">posix.</span>swapon
+        <span class="apidocSignatureSpan">(path, swapflags)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">swapon = function (path, swapflags) {
+    return posix.swapon(path, swap_flags(swapflags));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Example:
+
+    posix.sethostname(&#x27;beefheart&#x27;);
+
+## swap
+
+### posix.<span class="apidocCodeKeywordSpan">swapon</span>(path, swapflags)
+
+Enable the swap device located at `path`. `swapflags` is an optional array of
+strings to define the flags of the swap device, being available `prefer` and
+`discard`.
+
+### posix.swapoff(path)
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.posix.syslog" id="apidoc.module.posix.syslog">module posix.syslog</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.posix.syslog.syslog" id="apidoc.element.posix.syslog.syslog">
+        function <span class="apidocSignatureSpan">posix.</span>syslog
+        <span class="apidocSignatureSpan">(priority, message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">syslog = function (priority, message) {
+    return posix.syslog(syslog_const(priority), message);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### posix.closelog()
+
+Close connection to the logger.
+
+### posix.setlogmask(mask)
+
+Sets a priority mask for log messages. Further `posix.<span class="apidocCodeKeywordSpan">syslog</span>()` messages are
+only sent out if their priority is included in the mask. Priorities are listed
+under `posix.syslog()`.
+
+    // only send the most critical messages
+    posix.setlogmask({emerg:true, alert: true, crit: true});
+
+### posix.syslog(priority, message)
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
