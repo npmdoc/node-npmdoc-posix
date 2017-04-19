@@ -1,4 +1,7 @@
-# api documentation for  [posix (v4.1.1)](http://github.com/ohmu/node-posix)  [![npm package](https://img.shields.io/npm/v/npmdoc-posix.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-posix) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-posix.svg)](https://travis-ci.org/npmdoc/node-npmdoc-posix)
+# npmdoc-posix
+
+#### api documentation for  [posix (v4.1.1)](http://github.com/ohmu/node-posix)  [![npm package](https://img.shields.io/npm/v/npmdoc-posix.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-posix) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-posix.svg)](https://travis-ci.org/npmdoc/node-npmdoc-posix)
+
 #### The missing POSIX system calls
 
 [![NPM](https://nodei.co/npm/posix.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/posix)
