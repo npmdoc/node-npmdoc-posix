@@ -1,6 +1,6 @@
 # npmdoc-posix
 
-#### api documentation for  [posix (v4.1.1)](http://github.com/ohmu/node-posix)  [![npm package](https://img.shields.io/npm/v/npmdoc-posix.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-posix) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-posix.svg)](https://travis-ci.org/npmdoc/node-npmdoc-posix)
+#### basic api documentation for  [posix (v4.1.1)](http://github.com/ohmu/node-posix)  [![npm package](https://img.shields.io/npm/v/npmdoc-posix.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-posix) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-posix.svg)](https://travis-ci.org/npmdoc/node-npmdoc-posix)
 
 #### The missing POSIX system calls
 
@@ -88,7 +88,8 @@
         "install": "node-gyp rebuild",
         "test": "make test"
     },
-    "version": "4.1.1"
+    "version": "4.1.1",
+    "bin": {}
 }
 ```
 
