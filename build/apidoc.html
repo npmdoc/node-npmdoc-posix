@@ -450,7 +450,9 @@ Returns the current process&#x27;s effective user ID.
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">function getgid() { [native code] }</pre></li>
+    <li>description and source-code<pre class="apidocCodePre">getgid = function () {
+    return;
+}</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 * mmap() http://npm.im/mmap
 * PAM authentication, flock() and mkstemp() http://npm.im/unixlib
@@ -566,7 +568,16 @@ console.log(&#x27;init&#x27;s PGID: &#x27; + posix.getpgid(1));
     <li>description and source-code<pre class="apidocCodePre">getpgrp = function () {
     return posix.getpgid(0);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+assert.throws(function () {
+    posix.setsid();
+}, /EPERM/);
+
+////////////////////////////////////////
+// wrappers
+assert.equal(posix.getpgid(0), posix.<span class="apidocCodeKeywordSpan">getpgrp</span>());
+...</pre></li>
     </ul>
 
 
@@ -663,7 +674,9 @@ range from 0 up to the hard limit, and (irreversibly) lower its hard limit.
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">function getuid() { [native code] }</pre></li>
+    <li>description and source-code<pre class="apidocCodePre">getuid = function () {
+    return;
+}</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 * PAM authentication, flock() and mkstemp() http://npm.im/unixlib
 * execvp() http://npm.im/kexec
@@ -818,7 +831,9 @@ posix.seteuid(&#x27;nobody&#x27;);
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">function setgid() { [native code] }</pre></li>
+    <li>description and source-code<pre class="apidocCodePre">setgid = function () {
+    return;
+}</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 * execvp() http://npm.im/kexec
 
@@ -1063,7 +1078,9 @@ Creates a session and sets the process group ID. Returns the process group ID.
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">function setuid() { [native code] }</pre></li>
+    <li>description and source-code<pre class="apidocCodePre">setuid = function () {
+    return;
+}</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
 ## General Information
